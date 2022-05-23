@@ -1,1 +1,1 @@
-# mkdir-getting-started-with-jest
+# getting-started-with-jest
