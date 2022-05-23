@@ -2,7 +2,7 @@ const isTBBTCharacter = require('../isTBBTCharacter')
 
 describe('search character', () => {
 
-    test("should find character in characters array", () => {  
+    test("should find character in characters JSON", () => {  
         
         expect(isTBBTCharacter('Barry')).toBe(true)
         
