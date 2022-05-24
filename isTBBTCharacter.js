@@ -1,12 +1,22 @@
 let mainCharacters = require('./characters.json').map(character => character.name)
 
-function isTBBTCharacter (name = 'null') {
-    // normalize string
-    
-    let formatedName = name.toLowerCase().trim()
-    formatedName = formatedName.charAt(0).toUpperCase() + formatedName.slice(1)
-    
-    return mainCharacters.includes(formatedName)
+function normalizeString (string) {
+
+    let formattedName = string.toLowerCase().trim()
+    formattedName = formattedName.charAt(0).toUpperCase() + formattedName.slice(1)
+
+    return formattedName
+
 }
 
-module.exports = isTBBTCharacter
+function isTBBTCharacter (name = 'null') {
+    return mainCharacters.includes(normalizeString(name))
+}
+
+
+module.exports = {
+    isTBBTCharacter,
+    normalizeString,
+} 
+    
+// module.exports = 
